@@ -1,0 +1,12 @@
+<mat-toolbar class="header-toolbar" color="primary" #toolbar>
+
+<div class="search" color="primary" style="width: 100%; ">
+    <div class="inputWithIcon">
+      <input #searchInput class="form-control " [formControl]="currencyControl" type="search"
+        (keydown.enter)="completedSearch()" placeholder="Enter the Currency"><span class="fa">
+        <a (click)='clearSearch()'>X</a>
+      </span>
+    </div>
+  </div>
+  </mat-toolbar>
+  Base:{{baseSubject|async}}

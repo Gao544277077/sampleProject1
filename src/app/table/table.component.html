@@ -1,0 +1,18 @@
+
+<mat-toolbar mat-dialog-header style="background-color: white;">
+  <h1 style="margin-left: auto;" mat-button class="close-icon" (click)="close()">
+      <mat-icon>close</mat-icon>
+  </h1>
+</mat-toolbar>
+<table *ngIf="!(LoadingSubject|async)"  mat-table class="report-table mat-elevation-z8" [dataSource]="dataSource|async" matSort matSortActive="label" matSortDirection="asc" matSortDisableClear  style="width: 100%;">
+    <ng-container matColumnDef="currency">
+      <th mat-header-cell *matHeaderCellDef class="fontStyle"> Currency </th>
+      <td mat-cell *matCellDef="let element" class="fontStyle"> {{element.currency}} </td>
+    </ng-container>
+    <ng-container class="fontStyle" matColumnDef="rate">
+      <th class="fontStyle" mat-header-cell *matHeaderCellDef> Rate </th>
+      <td class="fontStyle" mat-cell *matCellDef="let element"> {{element.rate}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

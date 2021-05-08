@@ -1,0 +1,14 @@
+
+.centerCardContent {
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+}
+mat-card {
+    margin: auto;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,15 @@
+<mat-toolbar mat-dialog-header style="background-color: white;">
+    <h1 style="margin-left: auto;" mat-button class="close-icon" (click)="close()">
+        <mat-icon>close</mat-icon>
+    </h1>
+  </mat-toolbar>
+
+<mat-grid-list cols="1" rowHeight="100px" >
+    <mat-grid-tile class="fontStyle"
+        *ngFor="let tile of tiles"
+        [colspan]="tile.cols"
+        [rowspan]="tile.rows"
+        [style.background]="tile.color">
+        {{tile.label}}: {{tile.text}}
+    </mat-grid-tile>
+  </mat-grid-list>
